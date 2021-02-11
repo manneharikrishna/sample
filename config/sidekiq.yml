@@ -1,0 +1,26 @@
+:concurrency: 5
+
+:queues:
+  - default
+  - mailers
+
+:schedule:
+  register_deposits_in_accounting:
+    cron: 0 2 * * *
+    class: RegisterTransactionsInAccountingJob
+    args: deposit
+
+  register_payments_in_accounting:
+    cron: 0 2 * * *
+    class: RegisterTransactionsInAccountingJob
+    args: payment
+
+  register_awards_in_accounting:
+    cron: 0 2 * * *
+    class: RegisterTransactionsInAccountingJob
+    args: award
+
+  register_withdrawals_in_accounting:
+    cron: 0 2 * * *
+    class: RegisterTransactionsInAccountingJob
+    args: withdrawal

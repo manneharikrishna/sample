@@ -1,0 +1,9 @@
+{
+  "name": "Example Lottery",
+  "headline": "This is an example headline",
+  "description": "This is an example lottery",
+  "starts_at": "2050-10-24T12:00:00.000Z",
+  "ends_at": "2050-10-28T00:00:00.000Z",
+  "cover": null,
+  "repeat_every": "86400"
+}

@@ -1,0 +1,1 @@
+class CoverUploader < ImageUploader; end

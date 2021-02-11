@@ -1,0 +1,2 @@
+ENV.fetch('KAR_API_URL')
+ENV.fetch('KAR_CERTIFICATE')

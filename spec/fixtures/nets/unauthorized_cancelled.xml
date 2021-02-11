@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaymentInfo>
+  <MerchantId>12003105</MerchantId>
+  <QueryFinished>2019-08-12T10:51:36.0583805+02:00</QueryFinished>
+  <TransactionId>b9f1f1ae6ed84fb285bc710195694d4e</TransactionId>
+  <AuthenticationInformation />
+  <AvtaleGiroInformation />
+  <CardInformation>
+    <MaskedPAN />
+  </CardInformation>
+  <CustomerInformation>
+    <Address1 />
+    <Address2 />
+    <CompanyName />
+    <CompanyRegistrationNumber />
+    <CustomerNumber />
+    <Country />
+    <Email />
+    <FirstName />
+    <IP>77.252.182.186</IP>
+    <LastName />
+    <PhoneNumber />
+    <Postcode />
+    <SocialSecurityNumber />
+    <Town />
+  </CustomerInformation>
+  <Error>
+    <DateTime>2019-08-12T10:31:02.597</DateTime>
+    <Operation>Terminal</Operation>
+    <ResponseCode>17</ResponseCode>
+    <ResponseSource>Terminal</ResponseSource>
+    <ResponseText>Cancelled by customer.</ResponseText>
+  </Error>
+  <ErrorLog>
+    <PaymentError>
+      <DateTime>2019-08-12T10:31:02.597</DateTime>
+      <Operation>Terminal</Operation>
+      <ResponseCode>17</ResponseCode>
+      <ResponseSource>Terminal</ResponseSource>
+      <ResponseText>Cancelled by customer.</ResponseText>
+    </PaymentError>
+  </ErrorLog>
+  <History>
+    <TransactionLogLine>
+      <DateTime>2019-08-12T10:30:39.707</DateTime>
+      <Description />
+      <Operation>Register</Operation>
+      <TransactionReconRef />
+    </TransactionLogLine>
+  </History>
+  <OrderInformation>
+    <Amount>100</Amount>
+    <Currency>NOK</Currency>
+    <Fee>0</Fee>
+    <OrderDescription />
+    <OrderNumber>Test</OrderNumber>
+    <Timestamp>2019-08-12T10:30:39.707</Timestamp>
+    <Total>100</Total>
+    <RoundingAmount>0</RoundingAmount>
+  </OrderInformation>
+  <SecurityInformation>
+    <IPCountryMatchesIssuingCountry>true</IPCountryMatchesIssuingCountry>
+  </SecurityInformation>
+  <Summary>
+    <AmountCaptured>0</AmountCaptured>
+    <AmountCredited>0</AmountCredited>
+    <Annuled>false</Annuled>
+    <Annulled>false</Annulled>
+    <Authorized>false</Authorized>
+  </Summary>
+  <TerminalInformation>
+    <Browser>Chrome-Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36</Browser>
+    <CustomerEntered>2019-08-12T10:30:59.720</CustomerEntered>
+    <CustomerRedirected>2019-08-12T10:31:02.613</CustomerRedirected>
+  </TerminalInformation>
+</PaymentInfo>

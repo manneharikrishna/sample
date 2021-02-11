@@ -1,0 +1,191 @@
+nn:
+  layouts:
+    mailer:
+      greeting: "Hei,"
+      user_greeting: "Hei %{name},"
+      copyright_notice: "All rights reserved."
+
+  sign_up_mailer:
+    welcome:
+      subject: "Hei og velkommen til %{application}"
+      headline: "Velkommen!"
+      explanation: "Vi er opptatt av at du skal spille trygt på våre spill, bli underholdt og kanskje kunne realisere dine drømmer gjennom muligheten til å vinne de virkelig store pengepremiene."
+      certification: "%{application} er godkjent av norske myndigheter og opererer etter tillatelse fra Lotteritilsynet."
+      humanitarian_support: "Halvparten av alle inntekter etter at gevinster er betalt ut går til organisasjonen Right To Play, som er %{application} sitt veldedige formål."
+      action: "Spill %{application}"
+      instructions: "Du spiller %{application} på mobilen, PC, Mac eller nettbrett og spillet består av to deler: et engasjerende minispill som gir deg svar på om du har vunnet pengepremier der og da, samt en spennende presentasjon hver søndag kl 19.00, der de virkelig store premiene vises."
+      acknowledgment: "Vi ønsker deg velkommen og håper du vil la deg underholde av spillene våre."
+      complimentary_close: "Takk,"
+      sender: "%{application}-teamet"
+
+  password_mailer:
+    password_reset:
+      subject: "Forespørsel om resetting av passord"
+      headline: "Nytt passord"
+      instructions: "Vi fikk beskjed om at du har glemt passordet ditt."
+      explanation: "Klikk nedenfor for å resette det:"
+      action: "Tast inn nytt passord"
+      expiration_notice: "Denne linken utløper om 24 timer. Etter det må du starte prosessen på nytt."
+      contact_information: "Om du ikke har bedt om nytt passord, vær så snill å gi oss beskjed på"
+      complimentary_close: "Takk,"
+      sender: "%{application}-teamet"
+
+  prize_mailer:
+    prize_reveal:
+      subject: "Du har vunnet i %{application}!"
+      headline: "Du vant!"
+      notice: "Ditt lodd i %{application} vant følgende premie:"
+      payout_information: "Gevinsten er overført til din lommebok. Dersom beløpet i lommeboken overstiger %{limit} vil det overskytende beløp bli utbetalt til din bankkonto."
+      instructions: "Prøv lykken igjen:"
+      action: "Spill %{application}"
+      complimentary_close: "Takk,"
+      sender: "%{application}-teamet"
+
+    prize:
+      worth: "verdi"
+
+    weekly_reminder:
+      subject: "Husk å sjekke om du vant i %{application}!"
+      headline: "Har du vunnet?"
+      notice: "Du har gullodd i %{application} denne uken. Nå kan du sjekke om du har vunnet en av de store gevinstene!"
+      golden_ticket: "Gull lodd"
+      instructions: "Gå inn på %{application} og sjekk dine gullodd!"
+      action: "Spill %{application}"
+      caution: "Om du ikke åpner loddene selv, blir de åpnet automatisk etter 24 timer."
+      acknowledgment: "Takk for at du støtter Right To Play!"
+      humanitarian_support: "Right To Play er en internasjonal organisasjon som bruker lek som verktøy for å beskytte, utdanne og styrke barn i utviklingsland."
+      complimentary_close: "Takk,"
+      sender: "%{application}-teamet"
+
+  withdrawal_mailer:
+    bank_transfer:
+      subject: "Vi har sendt deg penger!"
+      headline: "Overføring til bankkonto"
+      notice: "Vi har overført kr. %{amount} til bankkontonummeret du registrerte hos oss."
+      explanation: "Når beløpet som er registrert i din digitale lommebok overstiger %{limit}, så er reglen at vi må overføre det overskytende til din bankkonto."
+      delay_notice: "Vær oppmerksom på at det kan ta noen dager før pengene er disponible på din konto."
+      action: "Gå til profil"
+      acknowledgment: "Takk for at du spiller %{application} og støtter Right To Play!"
+      complimentary_close: "Vennlig hilsen,"
+      sender: "%{application}-teamet"
+
+    missing_bank_account_number:
+      subject: "Ditt bankkontonummer mangler"
+      headline: "Manglende bankkontonummer"
+      explanation: "Når beløpet som er registrert i din digitale lommebok overstiger %{limit}, så er reglen at vi må overføre det overskytende til din bankkonto. We trenger kontonummeret som du ønsker at vi skal overføre pengene til."
+      instructions: "Det er viktig at du ikke sender slik informasjon via e-mail eller andre åpne kommunikasjonskanaler. Vi ber deg derfor om å logge inn på %{application}, åpne din brukerprofil og legge inn bankkontonummeret der."
+      acknowledgment: "Takk for hjelpen og for at du spiller %{application} og støtter Right To Play!"
+      complimentary_close: "Vennlig hilsen,"
+      sender: "%{application}-teamet"
+
+  subscription_mailer:
+    activation:
+      subject: "Bekreftelse på abonnement"
+      headline: "Velkommen som abonnent!"
+      explanation: "Ditt abonnement på %{application} er nå aktivt. Hver mandag trekkes %{amount} kr fra kontoen din som gir deg %{tickets_count} lodd i %{application}!"
+      instructions: "Prøv vinnerlykken din!"
+      action: "Spill %{application} nå!"
+      contact_information: "Vi er her for deg. Ta kontakt med oss på %{email} hvis du lurer på noe."
+      complimentary_close: "Lykke til!,"
+      sender: "Hilsen oss i %{application}"
+
+    cancellation:
+      subject: "Ditt abonnement på %{application} er avsluttet"
+      headline: "Ditt abonnement er avsluttet."
+      explanation: "Vi bekrefter at abonnementet ditt på %{application} er avsluttet. Vi ønsker deg velkommen tilbake! Om du ønsker å spille uten å abonnere kan du enkelt gjøre det på %{application}!"
+      instructions: "Prøv vinnerlykken din!"
+      action: "Spill %{application} nå!"
+      contact_information: "Vi er her for deg. Ta kontakt med oss på %{email} hvis du lurer på noe."
+      complimentary_close: "Takk,"
+      sender: "Hilsen oss i %{application}"
+
+    payment_failure:
+      subject: "Ditt abonnement på %{application} ble avsluttet"
+      headline: "Ditt abonnement har blitt stoppet"
+      explanation: "Det har oppstått et problem med betalingen for ditt abonnement på %{application}. Dette kan skyldes at kortet ditt er utløpt, at det ikke er tilstrekkelig med penger på kortet eller at maksbeløpet ditt er nådd. Vi vil forsøke om igjen, men sjekk gjerne at ovennevnte er i orden, og ta kontakt med oss på %{email} om det er noe du lurer på."
+      action: "Gå til din profil"
+      complimentary_close: "Takk,"
+      sender: "Hilsen oss i %{application}"
+
+    expiration:
+      subject: "Ditt abonnement på %{application} er avsluttet"
+      headline: "Ditt abonnement er avsluttet."
+      explanation: "The time to renew your subscription has expired therefore your subscription has been deactivated. It means that we will no longer buy tickets for you each week. If you want to subscribe again, just go to %{application}!"
+      action: "Renew subscription"
+      contact_information: "Vi er her for deg. Ta kontakt med oss på %{email} hvis du lurer på noe."
+      complimentary_close: "Takk,"
+      sender: "Hilsen oss i %{application}"
+
+    upcoming_expiration:
+      subject: "Your %{application} subscription was cancelled"
+      headline: "Subscription is off!"
+      explanation: "We want to inform you that your subscription is off. It means that we will no longer buy tickets for you each week. If you want to subscribe again, just go to %{application}!"
+      instructions: "Try your luck:"
+      action: "Play %{application}"
+      acknowledgment: "If you have any questions contact us: %{email}."
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+  session_mailer:
+    failed_limit_exceeded:
+      greeting: "Hi,"
+      subject: "Failed limit exceeded!"
+      headline: "Failed limit exceeded!"
+      explanation: "There was an increase in failed logins."
+      instructions: "Please contact with your development team."
+      complimentary_close: "Yours sincerely,"
+      sender: "The %{application} Team"
+
+  24sevenoffice:
+    withdrawal:
+      comment: "Utbetaling fra %{application}"
+
+  errors:
+    attributes:
+      starts_at:
+        after: "Kan ikke være i fortiden"
+      ends_at:
+        after: "kan ikke være før før starttidspunktet"
+      duration:
+        cannot_fall_below:
+          one: "kan ikke være mindre enn én 1 dag"
+          other: "kan ikke være mindre enn %{count} dager"
+        cannot_exceed:
+          one: "kan ikke være mer enn 1 dag"
+          other: "kan ikke være mer enn %{count} dager"
+      payback_ratio:
+        cannot_fall_below: "kan ikke være lavere enn %{count}%"
+        cannot_exceed: "kan ikke være mer enn %{count}%"
+      birthdate:
+        invalid_date: "er ikke gyldig"
+        on_or_before: "mmå være minimum 18 år"
+
+    messages:
+      not_owned: "er ikke eid"
+      improbable_phone: "ikke gyldig"
+      invalid_datetime: "ikke gyldig"
+      invalid_zipcode: "er ikke gyldig i det land som er valgt"
+      host_not_allowed: "host er ikke tillatt"
+      cannot_fall_below: "kan ikke være under %{count}"
+      cannot_exceed: "kan ikke være over %{count}"
+      tickets_count_exceeded: "Antall premier kan ikke overstige antall lodd"
+      total_revenue_exceeded: "Samlet premieverdi kan ikke overstige total omsetning"
+      loss_limit_exceeded: "Tapgrense er overskredet"
+      invalid_credentials: "Feil e-post eller passord"
+      lottery_duration_exceeded: "kan ikke overstige lotteriets varighet"
+      subscription_limit: "Spiller har ikke lov til å ha mer enn en aktiv abonnement."
+      entry_revealed: "Inngang er allerede avslørt"
+
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: true
+
+  currency:
+    unit:
+      NOK: "kr."

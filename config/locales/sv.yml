@@ -1,0 +1,186 @@
+sv:
+  layouts:
+    mailer:
+      greeting: "Hej,"
+      user_greeting: "Hej %{name},"
+      copyright_notice: "Alla rättigheter förbehållna."
+
+  sign_up_mailer:
+    welcome:
+      subject: "Välkommen till %{application}"
+      headline: "Välkommen!"
+      explanation: "Vi är noga med att ditt spelande hos oss är säkert och ansvarsfullt. Vi hoppas att du upplever spelandet hos oss underhållande och kanske till och med förverkligar någon av dina drömmar med att vinna någon av de högsta vinsterna."
+      certification: "%{application} är noggrant konttrollerat och genomförs med tillstånd av Spelinspektionen."
+      humanitarian_support: "Överskottet går till SBFO, en riksorganisation med över 700 ideella föreningar som medlemmar."
+      action: "Spela %{application}"
+      instructions: "%{application} är tillgängligt på internet och kan spelas från din mobiltelefon, PC, Mac eller läsplatta. Spelet består av två delar; du vet omedelbart om du har vunnit några av de lägra vinsterna plus en spännande dragning som presenteras varje söndag klockan 19.00."
+      acknowledgment: "Spela och vinn - lycka till!"
+      complimentary_close: "Tack,"
+      sender: "%{application} Team"
+
+  password_mailer:
+    password_reset:
+      subject: "Återställ lösenordet"
+      headline: "Nytt lösenord"
+      instructions: "Vi har förstått att du har glömt ditt lösenord."
+      explanation: "Klicka för att återställa:"
+      action: "Skapa ett nytt lösenord"
+      expiration_notice: "Om 24 timmar är inte längre länken aktiv och du kommer att behöva upprepa ditt lösenord."
+      contact_information: "Om du inte begärde ett nytt lösenord, maila oss på"
+      complimentary_close: "Tack,"
+      sender: "%{application} Team"
+
+  prize_mailer:
+    prize_reveal:
+      subject: "Du har vunnit hos %{application}!"
+      headline: "Du vann!"
+      notice: "Du har vunnit följande priser med ditt deltagande i %{application}:"
+      payout_information: "Organisatören kommer snart att kontakta dig för att berätta hur du kan få vinsterna."
+      instructions: "Prova lyckan igen:"
+      action: "Spela %{application}"
+      complimentary_close: "Tack,"
+      sender: "%{application} Team"
+    prize:
+      worth: "värde"
+
+    weekly_reminder:
+      subject: "Vann du?"
+      headline: "Vann du?"
+      notice: "Du har golden tickets hos %{application} den här veckan. Nu kan du se om du har vunnit någon av de högsta vinsterna!"
+      golden_ticket: "Golden Ticket"
+      instructions: "Besök %{application} och rätta dina golden tickets!"
+      action: "Spela %{application}"
+      caution: "Observera att dina gyllene biljetter endast är tillgängliga under de kommande 24 timmarna. Skynda dig!"
+      acknowledgment: "Tack för att du stöder svensk idrott!"
+      humanitarian_support: "SBFO arbetar för att Sveriges ideella föreningsliv ska fortsätta vara starkt, slagkraftigt och öppet."
+      complimentary_close: "Tack,"
+      sender: "%{application} Team"
+
+  withdrawal_mailer:
+    bank_transfer:
+      subject: "Vi har skickat pengar till dig!"
+      headline: "Banköverföring"
+      notice: "Vi har överfört %{amount} till kontot hos din bank som du har uppgett hos oss."
+      explanation: "När beloppet på ditt konto hos oss överstiger %{limit}, så kommer vi enligt regelverket att överföra dina pengar till kontot hos din bank."
+      delay_notice: "Vänligen notera att det kan ta några dagar innan pengarna är tillgängliga på kontot hos din bank."
+      action: "Gå till profilen"
+      acknowledgment: "Tack för att du spelar %{application} och stödjer SBFO's medlemsföreningar!"
+      complimentary_close: "Vänliga hälsningar,"
+      sender: "%{application} Team"
+
+    missing_bank_account_number:
+      subject: "Kontonumret till din bank saknas"
+      headline: "Kontonummer saknas"
+      explanation: "När beloppet på ditt konto hos oss överstiger %{limit}, så kommer vi enligt regelverket att överföra dina pengar till kontot hos din bank. Vi behöver kontonumret hos din bank som du vill att vi överför pengar till."
+      instructions: "Det är väldigt viktigt att du inte skickar den typen av känslig information via mail eller andra öppna kommunikationskanaler. För säkerhets skull ber vi dig att logga in hos %{application}, öppna ditt konto och ange kontonumret till din bank i din profil."
+      acknowledgment: "Tack för din hjälp och för att du spelar  %{application} och stöder svensk idrott!"
+      complimentary_close: "Vänliga hälsningar,"
+      sender: "%{application} Team"
+
+  subscription_mailer:
+    activation:
+      subject: "Din prenumeration på %{application} är aktiverad"
+      headline: "Prenumerationen är aktiverad!"
+      explanation: "Vi vill bekräfta att din prenumeration har börjat. Det betyder att vi kommer att dra %{amount} kronor från ditt konto för %{tickets_count} som är redo för dig att spela med."
+      instructions: "Pröva din lycka:"
+      action: "Spela %{application}"
+      contact_information: "Om det är något du undrar över så kontakta oss: %{email}."
+      complimentary_close: "Tack,"
+      sender: "%{application}-teamet"
+
+    cancellation:
+      subject: "Din prenumeration på %{application} är avslutad"
+      headline: "Prenumerationen är avslutad"
+      explanation: "Vi vill bekräfta att din prenumeration är avslutad. Det betyder att vi inte kommer att dra pengar från ditt konto för nya lotter varje vecka. Gå till %{application} om du vill starta en ny prenumeration."
+      instructions: "Pröva din lycka:"
+      action: "Spela %{application}"
+      contact_information: "Om det är något du undrar över så kontakta oss: %{email}."
+      complimentary_close: "Tack,"
+      sender: "%{application}-teamet"
+
+    payment_failure:
+      subject: "Din prenumeration på %{application} är inte aktiverad"
+      headline: "Betalningsproblem"
+      explanation: "Vi vill informera dig om att det har uppstått något problem med betalningen. Vi kommer att försöka köpa lotter till dig igen, men var vänlig och kontrollera dina prenumerationsuppgifter i din profil. Skriv gärna till oss om allting är okej: %{email}."
+      action: "Gå till profil"
+      complimentary_close: "Tack,"
+      sender: "%{application}-teamet"
+
+    expiration:
+      subject: "Din prenumeration på %{application} är avslutad"
+      headline: "Prenumerationen är avslutad"
+      explanation: "The time to renew your subscription has expired therefore your subscription has been deactivated. It means that we will no longer buy tickets for you each week. If you want to subscribe again, just go to %{application}!"
+      action: "Renew subscription"
+      contact_information: "Om det är något du undrar över så kontakta oss: %{email}."
+      complimentary_close: "Tack,"
+      sender: "%{application}-teamet"
+
+    upcoming_expiration:
+      subject: "Din prenumeration på %{application} är avslutad"
+      headline: "Prenumerationen är avslutad"
+      explanation: "Vi vill bekräfta att din prenumeration är avslutad. Det betyder att vi inte kommer att dra pengar från ditt konto för nya lotter varje vecka. Gå till %{application} om du vill starta en ny prenumeration."
+      instructions: "Pröva din lycka:"
+      action: "Spela %{application}"
+      acknowledgment: ""
+      complimentary_close: "Tack,"
+      sender: "%{application}-teamet"
+
+  session_mailer:
+    failed_limit_exceeded:
+      greeting: "Hi,"
+      subject: "Failed limit exceeded!"
+      headline: "Failed limit exceeded!"
+      explanation: "There was an increase in failed logins."
+      instructions: "Please contact with your development team."
+      complimentary_close: "Yours sincerely,"
+      sender: "The %{application} Team"
+
+  24sevenoffice:
+    withdrawal:
+      comment: "Utbetalning från %{application}"
+
+  errors:
+    attributes:
+      starts_at:
+        after: "kan inte vara äldre än realtid"
+      ends_at:
+        after: "kan inte hända före start-tid"
+      duration:
+        cannot_fall_below:
+          one: "kan inte vara mindre än 1 dag"
+          other: "kan inte vara mindre än %{count} dagar"
+        cannot_exceed:
+          one: "kan inte vara mer än 1 dag"
+          other: "kan inte vara mer än %{count} dagar"
+      payback_ratio:
+        cannot_fall_below: "kan inte vara mindre än %{count}%"
+        cannot_exceed: "kan inte överstiga %{count}%"
+      birthdate:
+        invalid_date: "är ogiltigt"
+        on_or_before: "åldersgränsen är minst 18 år"
+
+    messages:
+      not_owned: "ägs inte"
+      improbable_phone: "är ogiltigt"
+      invalid_datetime: "är ogiltigt"
+      invalid_zipcode: "är ogiltigt i det valda landet"
+      host_not_allowed: "värd är inte tillåtet"
+      cannot_fall_below: "kan inte %{count}"
+      cannot_exceed: "kan inte överstiga %{count}"
+      tickets_count_exceeded: "Antalet vinster kan inte överstiga antalet lotter"
+      total_revenue_exceeded: "Vinstens totala värde kan inte överstiga den totala omsättningen"
+      loss_limit_exceeded: "Förlustgränsen har överstigits"
+      invalid_credentials: "Fel e-post eller lösenord"
+      lottery_duration_exceeded: "kan inte överskrida lotteriets varaktighet"
+      subscription_limit: "Spelaren kan inte ha mer än 1 aktiv prenumeration."
+      entry_revealed: "Anmälan är redan avslöjad"
+
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: true

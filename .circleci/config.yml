@@ -1,0 +1,286 @@
+version: 2.1
+jobs:
+  build: &build
+    docker:
+      - image: circleci/ruby:2.3.4
+      - image: circleci/postgres:9.6-alpine-ram
+
+    environment:
+      RAILS_ENV: test
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      DATABASE_URL: postgres://postgres@localhost:5432/postgres
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - v1-dependencies-
+
+      - run:
+          name: Configure Bundler
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler
+
+      - run:
+          name: Install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Load the database schema
+          command: |
+            bundle exec rails db:schema:load
+
+      - run:
+          name: Run tests
+          command: |
+            mkdir /tmp/test-results
+
+            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
+
+            bundle exec rspec --format progress \
+                            --format RspecJunitFormatter \
+                            --out /tmp/test-results/rspec.xml \
+                            $TEST_FILES
+
+      - run:
+          name: Run static code analysis
+          command: |
+            bundle exec rubocop
+
+      - store_test_results:
+          path: /tmp/test-results
+
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test-results
+
+  buildEN: &buildEN
+    docker:
+      - image: circleci/ruby:2.3.4
+      - image: circleci/postgres:9.6-alpine-ram
+
+    environment:
+      RAILS_ENV: test
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      DATABASE_URL: postgres://postgres@localhost:5432/postgres
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}
+            - v1-dependencies-
+
+      - run:
+          name: Configure Bundler
+          command: |
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
+            gem install bundler
+
+      - run:
+          name: Install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Load the database schema
+          command: |
+            bundle exec rails db:schema:load
+
+      - run:
+          name: Run tests
+          command: |
+            mkdir /tmp/test-results
+
+            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
+
+            bundle exec rspec --format progress \
+                            --format RspecJunitFormatter \
+                            --out /tmp/test-results/rspec.xml \
+                            $TEST_FILES
+
+      - store_test_results:
+          path: /tmp/test-results
+
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test-results
+
+
+  build-se:
+    <<: *buildEN
+    steps:
+      - sonarcloud/scan
+
+  deploy: &deploy
+    docker:
+      - image: chimeraprime/heroku-cli:latest
+
+    steps:
+      - checkout
+
+      - run:
+          name: Set up the Heroku CLI
+          command: /setup.sh
+
+      - run:
+          name: Deploy the application
+          command: |
+            git push heroku HEAD:refs/heads/master
+
+      - run:
+          name: Run database migrations
+          command: |
+            heroku run --exit-code rails db:migrate
+
+      - run:
+          name: Restart the application
+          command: |
+            heroku restart
+
+  deployEN: &deployEN
+    docker:
+      - image: chimeraprime/heroku-cli:latest
+
+    steps:
+      - checkout
+
+      - run:
+          name: Set up the Heroku CLI
+          command: /setup.sh
+
+      - run:
+          name: Deploy the application
+          command: |
+            git push heroku HEAD:refs/heads/master
+
+      - run:
+          name: Run database migrations
+          command: |
+            heroku run --exit-code rails db:migrate
+
+      - run:
+          name: Restart the application
+          command: |
+            heroku restart
+
+  deploy-no-enhance: 
+    <<: *deployEN
+    environment:
+      HEROKU_APP_NAME: snapchance-api-enhance-sc
+
+  deploy-no-development:
+    <<: *deploy
+    environment:
+      HEROKU_APP_NAME: snapchance-api-development
+
+  deploy-no-staging:
+    <<: *deploy
+    environment:
+      HEROKU_APP_NAME: snapchance-api-staging
+
+  deploy-se-development:
+    <<: *deploy
+    environment:
+      HEROKU_APP_NAME: fotolotto-se-api-development
+
+  deploy-se-staging-production:
+    docker:
+      - image: docker:18.06.1-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Install deployment dependencies
+          command: |
+            apk add py-pip
+            pip install awscli
+      - run:
+          name: Set AWS profile
+          command: |
+            aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile $AWS_DEPLOYMENT_PROFILE
+            aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile $AWS_DEPLOYMENT_PROFILE
+            aws configure set region $AWS_REGION --profile $AWS_DEPLOYMENT_PROFILE
+      - run:
+          name: Download SOPS
+          command: |
+            wget https://github.com/mozilla/sops/releases/download/v3.6.0/sops-v3.6.0.linux -O /usr/local/bin/sops
+            chmod +x /usr/local/bin/sops
+      - run:
+          name: Decrypt secrets
+          command: sops --decrypt enc.env > .env
+      - run:
+          name: Build image and deploy
+          command: ./scripts/deploy-se.sh
+
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.1
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - buildEN
+      - build-se:
+          filters:
+            branches:
+              only:
+                - develop-se
+                - staging-se
+                - master-se
+    
+      - deploy-no-enhance:
+          requires:
+            - buildEN
+          filters:
+            branches:
+              only: enhance-scratchcard-no
+     
+      - deploy-no-development:
+          requires:
+            - buildEN
+          filters:
+            branches:
+              only: develop-no
+
+      - deploy-no-staging:
+          requires:
+            - buildEN
+          filters:
+            branches:
+              only: staging-no
+
+      - deploy-se-development:
+          requires:
+            - build-se
+          filters:
+            branches:
+              only: develop-se
+
+      - deploy-se-staging-production:
+          requires:
+            - build-se
+          filters:
+            branches:
+              only:
+                - staging-se
+                - master-se

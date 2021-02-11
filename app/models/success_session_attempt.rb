@@ -1,0 +1,2 @@
+class SuccessSessionAttempt < ApplicationRecord
+end

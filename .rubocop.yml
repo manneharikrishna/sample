@@ -1,0 +1,83 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - bin/*
+    - db/**/*
+    - config/**/*
+    - vendor/**/*
+    - lib/core_ext/*
+    - Gemfile
+
+Rails:
+  Enabled: true
+
+Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%w': '[]'
+    '%W': '[]'
+    '%i': '[]'
+    '%I': '[]'
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/AlignHash:
+  Enabled: false
+
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+Style/GuardClause:
+  MinBodyLength: 5
+  Exclude:
+    - lib/**/*
+    - app/services/deposits/verify.rb
+
+Style/IfUnlessModifier:
+  MaxLineLength: 55
+
+Style/AccessorMethodName:
+  Enabled: false
+
+Style/PredicateName:
+  Exclude:
+    - app/serializers/**/*
+
+Style/RescueModifier:
+  Exclude:
+    - spec/**/*
+
+Metrics/LineLength:
+  Max: 90
+  Exclude:
+    - lib/24sevenoffice/config.rb
+    - lib/nets/payload_configurator/registration_recurring.rb
+    - lib/nets/payload_configurator/subsequent_recurring.rb
+
+Metrics/MethodLength:
+  Exclude:
+    - app/services/deposits/verify.rb
+
+Metrics/AbcSize:
+  Exclude:
+    - app/services/create_drawing.rb

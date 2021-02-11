@@ -1,0 +1,10 @@
+{
+  "name": "Example License",
+  "lottery_type": "predrawn",
+  "min_duration": 1,
+  "max_duration": 30,
+  "max_tickets_count": 1000,
+  "max_total_revenue": "100000.00",
+  "min_payback_ratio": 10,
+  "max_payback_ratio": 90
+}

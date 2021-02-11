@@ -1,0 +1,15 @@
+{
+  "tickets_count": 100,
+  "ticket_price": "10.00",
+  "prizes": [
+    {
+      "id": null,
+      "name": "Example Prize",
+      "description": "Coupon",
+      "value": "9.99",
+      "quantity": 50,
+      "reveal_type": "drawing_end",
+      "image": null
+    }
+  ]
+}

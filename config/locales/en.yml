@@ -1,0 +1,187 @@
+en:
+  layouts:
+    mailer:
+      greeting: "Hi,"
+      user_greeting: "Hi %{name},"
+      copyright_notice: "All rights reserved."
+
+  sign_up_mailer:
+    welcome:
+      subject: "Welcome to %{application}"
+      headline: "Welcome!"
+      explanation: "We take great care to ensure that our games can be played safely and are used responsibly, and hope that you will let yourself entertain and perhaps be able to make a dream come true by winning one of the big prizes."
+      certification: "%{application} has been certified and operates under permit granted by the Norwegian Lottery Board."
+      humanitarian_support: "The humanitarian organisation Right To Play receives half of all revenue after prize payouts have been deducted."
+      action: "Play %{application}"
+      instructions: "%{application} is available on the internet and can be played on your mobile, PC, Mac or tablet and the game consists of two parts: a fun mini-game that lets you know if you have won money there and then and an exciting weekly presentation of the largest prizes every Sunday at 19:00."
+      acknowledgment: "We hope you will enjoy our games!"
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+  password_mailer:
+    password_reset:
+      subject: "Password reset request"
+      headline: "Need a new password?"
+      instructions: "We've got a message that you forgot your password."
+      explanation: "Click below to reset it:"
+      action: "Set new password"
+      expiration_notice: "After 24 hours the link will expire and you will need to repeat your password request."
+      contact_information: "If you didn't ask for a new password, please email us at"
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+  prize_mailer:
+    prize_reveal:
+      subject: "You won in %{application}!"
+      headline: "You won!"
+      notice: "You won the following prizes in %{application}:"
+      payout_information: "Your prizes have been added to your wallet. If the wallet exceeds %{limit} a payout will be made to your bank account."
+      instructions: "Try your luck again:"
+      action: "Play %{application}"
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+    prize:
+      worth: "worth"
+
+    weekly_reminder:
+      subject: "Did you win? Check %{application} now!"
+      headline: "Did you win?"
+      notice: "You have golden tickets in %{application} this week. Now you can check if you have won one of the big wins!"
+      golden_ticket: "Golden Ticket"
+      instructions: "Visit %{application} and check your golden tickets!"
+      action: "Play %{application}"
+      caution: "Please note that your golden tickets will be available only for the next 24 hours. Hurry up!"
+      acknowledgment: "Thanks for supporting Right To Play!"
+      humanitarian_support: "Right To Play is an international organization that uses games as a tool to protect, educate and empower children in developing countries."
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+  withdrawal_mailer:
+    bank_transfer:
+      subject: "We have sent you money!"
+      headline: "Bank transfer"
+      notice: "We have transferred the amount of %{amount} to the bank account number that you supplied us with."
+      explanation: "When the amount in your digital wallet exceeds %{limit}, then the rules oblige us to transfer the funds to your bank account."
+      delay_notice: "Please note that it could take up to several days before the money is deposited on your account."
+      action: "Go to profile"
+      acknowledgment: "Thank you for playing %{application} and supporting Right To Play!"
+      complimentary_close: "Yours sincerely,"
+      sender: "The %{application} Team"
+
+    missing_bank_account_number:
+      subject: "Your bank account number is missing"
+      headline: "Missing bank account number"
+      explanation: "When the amount in your digital wallet exceeds %{limit}, then the rules oblige us to transfer the funds to your bank account. We need the bank account number of the account you want us to transfer the money to."
+      instructions: "It is very important that you do not send such information via e-mail or other open communication channels. We therefore kindly ask you to do it safely by logging in at %{application}, opening your profile section and submitting the bank account number there."
+      acknowledgment: "Thank you for your kind assistance and for playing %{application} and supporting Right To Play!"
+      complimentary_close: "Yours sincerely,"
+      sender: "The %{application} Team"
+
+  subscription_mailer:
+    activation:
+      subject: "Your %{application} subscription is active!"
+      headline: "Subscription is active!"
+      explanation: "We want to inform you that your subscription is on. It means that every monday we will pick %{amount} kr from your account to buy you %{tickets_count} ticket(s) that will be waiting for you to play."
+      instructions: "Try your luck:"
+      action: "Play %{application}"
+      contact_information: "If you have any questions contact us: %{email}."
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+    cancellation:
+      subject: "Your %{application} subscription was cancelled"
+      headline: "Subscription is off!"
+      explanation: "We want to inform you that your subscription is off. It means that we will no longer buy tickets for you each week. If you want to subscribe again, just go to %{application}!"
+      instructions: "Try your luck:"
+      action: "Play %{application}"
+      contact_information: "If you have any questions contact us: %{email}."
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+    payment_failure:
+      subject: "Your %{application} subscription was cancelled"
+      headline: "Payment problems"
+      explanation: "We want to inform you that some problems with payment occurred. We will try again to get tickets for you, but please, in meantime check your subscription details in profile. If everything is okay please write to us: %{email}."
+      action: "Go to profile"
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+    expiration:
+      subject: "Your %{application} subscription was cancelled"
+      headline: "Subscription is OFF!"
+      explanation: "The time to renew your subscription has expired therefore your subscription has been deactivated. It means that we will no longer buy tickets for you each week. If you want to subscribe again, just go to %{application}!"
+      action: "Renew subscription"
+      contact_information: "If you have any questions contact us: %{email}."
+      action: "Go to profile"
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+    upcoming_expiration:
+      subject: "Your %{application} subscription was cancelled"
+      headline: "Subscription is off!"
+      explanation: "We want to inform you that your subscription is off. It means that we will no longer buy tickets for you each week. If you want to subscribe again, just go to %{application}!"
+      instructions: "Try your luck:"
+      action: "Play %{application}"
+      acknowledgment: "Thank you for playing %{application} and supporting Right To Play!"
+      complimentary_close: "Thanks,"
+      sender: "The %{application} Team"
+
+  session_mailer:
+    failed_limit_exceeded:
+      greeting: "Hi,"
+      subject: "Failed limit exceeded!"
+      headline: "Failed limit exceeded!"
+      explanation: "There was an increase in failed logins."
+      instructions: "Please contact with your development team."
+      complimentary_close: "Yours sincerely,"
+      sender: "The %{application} Team"
+
+  24sevenoffice:
+    withdrawal:
+      comment: "Payout from %{application}"
+
+  errors:
+    attributes:
+      starts_at:
+        after: "cannot be in the past"
+      ends_at:
+        after: "cannot preceed the start time"
+      duration:
+        cannot_fall_below:
+          one: "cannot fall below 1 day"
+          other: "cannot fall below %{count} days"
+        cannot_exceed:
+          one: "cannot exceed 1 day"
+          other: "cannot exceed %{count} days"
+      payback_ratio:
+        cannot_fall_below: "cannot fall below %{count}%"
+        cannot_exceed: "cannot exceed %{count}%"
+      birthdate:
+        invalid_date: "is invalid"
+        on_or_before: "must be at least 18 years old"
+
+    messages:
+      not_owned: "is not owned"
+      improbable_phone: "is invalid"
+      invalid_datetime: "is invalid"
+      invalid_zipcode: "is invalid in the selected country"
+      host_not_allowed: "host is not allowed"
+      cannot_fall_below: "cannot fall below %{count}"
+      cannot_exceed: "cannot exceed %{count}"
+      tickets_count_exceeded: "Prizes quantity cannot exceed the tickets count"
+      total_revenue_exceeded: "Prizes total value cannot exceed the total revenue"
+      loss_limit_exceeded: "Loss limit has been exceeded"
+      invalid_credentials: "Incorrect email or password"
+      lottery_duration_exceeded: "cannot exceed the lottery duration"
+      subscription_limit: "Player cannot have more than 1 active subscription."
+      entry_revealed: "Entry is already revealed"
+
+  number:
+    currency:
+      format:
+        delimiter: " "
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: true

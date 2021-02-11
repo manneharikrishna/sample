@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaymentInfo>
+  <MerchantId>12003105</MerchantId>
+  <QueryFinished>2019-08-14T10:53:35.5144435+02:00</QueryFinished>
+  <TransactionId>69ecf09d018c498b9c7a58b40671c921</TransactionId>
+  <AuthenticationInformation />
+  <AvtaleGiroInformation />
+  <CardInformation>
+    <ExpiryDate>2501</ExpiryDate>
+    <Issuer>Visa</Issuer>
+    <IssuerCountry>NO</IssuerCountry>
+    <MaskedPAN>492500******0087</MaskedPAN>
+    <PaymentMethod>Visa</PaymentMethod>
+    <IssuerId>3</IssuerId>
+  </CardInformation>
+  <CustomerInformation>
+    <Address1 />
+    <Address2 />
+    <CompanyName />
+    <CompanyRegistrationNumber />
+    <CustomerNumber />
+    <Country />
+    <Email />
+    <FirstName />
+    <IP>77.252.182.186</IP>
+    <LastName />
+    <PhoneNumber />
+    <Postcode />
+    <SocialSecurityNumber />
+    <Town />
+  </CustomerInformation>
+  <Error>
+    <DateTime>2019-08-14T10:53:17.437</DateTime>
+    <Operation>Auth</Operation>
+    <ResponseCode>99</ResponseCode>
+    <ResponseSource>Netaxept</ResponseSource>
+    <ResponseText>Auth Reg Comp Failure)</ResponseText>
+  </Error>
+  <ErrorLog>
+    <PaymentError>
+      <DateTime>2019-08-14T10:53:17.437</DateTime>
+      <Operation>Auth</Operation>
+      <ResponseCode>99</ResponseCode>
+      <ResponseSource>Netaxept</ResponseSource>
+      <ResponseText>Auth Reg Comp Failure)</ResponseText>
+    </PaymentError>
+  </ErrorLog>
+  <History>
+    <TransactionLogLine>
+      <DateTime>2019-08-14T10:51:04.667</DateTime>
+      <Description />
+      <Operation>Register</Operation>
+      <TransactionReconRef />
+    </TransactionLogLine>
+  </History>
+  <OrderInformation>
+    <Amount>100</Amount>
+    <Currency>NOK</Currency>
+    <Fee>0</Fee>
+    <OrderDescription />
+    <OrderNumber>Test</OrderNumber>
+    <Timestamp>2019-08-14T10:51:04.667</Timestamp>
+    <Total>100</Total>
+    <RoundingAmount>0</RoundingAmount>
+  </OrderInformation>
+  <SecurityInformation>
+    <CustomerIPCountry>PL</CustomerIPCountry>
+    <IPCountryMatchesIssuingCountry>false</IPCountryMatchesIssuingCountry>
+  </SecurityInformation>
+  <Summary>
+    <AmountCaptured>0</AmountCaptured>
+    <AmountCredited>0</AmountCredited>
+    <Annuled>false</Annuled>
+    <Annulled>false</Annulled>
+    <Authorized>false</Authorized>
+  </Summary>
+  <TerminalInformation>
+    <Browser>Chrome-Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36</Browser>
+    <CustomerEntered>2019-08-14T10:51:25.480</CustomerEntered>
+    <CustomerRedirected>2019-08-14T10:53:17.857</CustomerRedirected>
+  </TerminalInformation>
+</PaymentInfo>

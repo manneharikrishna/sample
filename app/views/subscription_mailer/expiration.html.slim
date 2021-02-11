@@ -1,0 +1,27 @@
+tr.header
+  td.header-container colspan="6"
+    table
+      tr
+        td
+          h3 = t('.headline')
+        td.header-image
+          - if norway?
+            = link_to(inline_image_tag('header_logo_no.png'), APPLICATION_DOMAIN)
+          - elsif sweden?
+            = link_to(inline_image_tag('header_logo_se.png'), APPLICATION_DOMAIN)
+tr
+  td colspan="6"
+    p.text.welcome = greeting(@player)
+    p.text = t('.explanation', application: LOCAL_APP_NAME)
+tr
+  td colspan="6"
+    .play-button-container
+      a.text.link href=@dashboard_redirect_url = t('.action')
+tr
+  td colspan="6"
+    p.text.last
+      = t('.contact_information', email: mail_to(SUPPORT_EMAIL_ADDRESS)).html_safe
+tr
+  td colspan="6"
+    p.regards = t('.complimentary_close')
+    p.regards.sign = t('.sender', application: LOCAL_APP_NAME)

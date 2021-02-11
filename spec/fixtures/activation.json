@@ -1,0 +1,8 @@
+{
+  "first_name": "Example",
+  "last_name": "Player",
+  "email": "player@example.com",
+  "password": "password",
+  "language": "en",
+  "is_pep": true
+}

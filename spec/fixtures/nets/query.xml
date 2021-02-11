@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PaymentInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MerchantId>12003105</MerchantId>
+  <QueryFinished>2019-02-19T17:37:46.3796626+01:00</QueryFinished>
+  <TransactionId>bc441001e7a74c6caf4332f8a064aea1</TransactionId>
+  <OrderInformation>
+    <Amount>100</Amount>
+    <Currency>EUR</Currency>
+    <OrderNumber>T12345</OrderNumber>
+    <OrderDescription> </OrderDescription>
+    <Fee>0</Fee>
+    <RoundingAmount>0</RoundingAmount>
+    <Total>100</Total>
+    <Timestamp>2018-11-20T12:27:19.643</Timestamp>
+  </OrderInformation>
+  <TerminalInformation>
+    <CustomerEntered>2018-11-20T12:41:32.373</CustomerEntered>
+    <CustomerRedirected>2018-11-20T12:56:41.717</CustomerRedirected>
+    <Browser>Unknown-curl/7.43.0</Browser>
+  </TerminalInformation>
+  <CustomerInformation>
+    <Email />
+    <IP>78.11.117.106</IP>
+    <PhoneNumber />
+    <CustomerNumber />
+    <FirstName />
+    <LastName />
+    <Address1 />
+    <Address2 />
+    <Postcode />
+    <Town />
+    <Country />
+    <SocialSecurityNumber />
+    <CompanyName />
+    <CompanyRegistrationNumber />
+  </CustomerInformation>
+  <Summary>
+    <AmountCaptured>10000</AmountCaptured>
+    <AmountCredited>0</AmountCredited>
+    <Annulled>false</Annulled>
+    <Annuled>false</Annuled>
+    <Authorized>true</Authorized>
+    <AuthorizationId>931877</AuthorizationId>
+  </Summary>
+  <CardInformation>
+    <Issuer>Visa</Issuer>
+    <IssuerCountry>NO</IssuerCountry>
+    <MaskedPAN>492500******0004</MaskedPAN>
+    <PanHash>[STOREDTOKEN]</PanHash>
+    <PaymentMethod>Visa</PaymentMethod>
+    <ExpiryDate>2405</ExpiryDate>
+    <IssuerId>3</IssuerId>
+  </CardInformation>
+  <History>
+    <TransactionLogLine>
+      <DateTime>2018-11-20T12:27:19.643</DateTime>
+      <Description />
+      <Operation>Register</Operation>
+      <TransactionReconRef />
+    </TransactionLogLine>
+    <TransactionLogLine>
+      <DateTime>2018-11-20T14:37:53.58</DateTime>
+      <Description>78.11.117.106</Description>
+      <Operation>Auth</Operation>
+      <BatchNumber>642</BatchNumber>
+      <TransactionReconRef />
+    </TransactionLogLine>
+    <TransactionLogLine>
+      <Amount>100</Amount>
+      <DateTime>2018-11-20T14:40:13.687</DateTime>
+      <Description>78.11.117.106</Description>
+      <Operation>Capture</Operation>
+      <BatchNumber>642</BatchNumber>
+      <TransactionReconRef />
+    </TransactionLogLine>
+  </History>
+  <ErrorLog />
+  <AuthenticationInformation />
+  <AvtaleGiroInformation />
+  <SecurityInformation>
+    <CustomerIPCountry>PL</CustomerIPCountry>
+    <IPCountryMatchesIssuingCountry>false</IPCountryMatchesIssuingCountry>
+  </SecurityInformation>
+</PaymentInfo>

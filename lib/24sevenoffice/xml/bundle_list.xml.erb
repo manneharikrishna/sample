@@ -1,0 +1,41 @@
+<bundlelist>
+  <SaveOption>1</SaveOption>
+  <Bundles>
+    <Bundle>
+      <YearId><%= @bundle.year_id %></YearId>
+      <Sort><%= @bundle.sort %></Sort>
+      <Name><%= @bundle.name %></Name>
+      <Vouchers>
+        <% @bundle.vouchers.each_with_index do |voucher, index| %>
+        <Voucher>
+          <TransactionNo><%= index + 1 %></TransactionNo>
+          <Entries>
+            <Entry>
+              <CustomerId><%= voucher.customer_id %></CustomerId>
+              <AccountId><%= voucher.account_ids[0] %></AccountId>
+              <Date><%= voucher.date %></Date>
+              <DueDate><%= voucher.date %></DueDate>
+              <Amount><%= voucher.amount %></Amount>
+              <CurrencyId><%= voucher.currency_id %></CurrencyId>
+              <TaxNo><%= voucher.tax_number %></TaxNo>
+              <Comment><%= voucher.comment %></Comment>
+              <BankAccountNo><%= voucher.bank_account_number %></BankAccountNo>
+            </Entry>
+            <Entry>
+              <CustomerId><%= voucher.customer_id %></CustomerId>
+              <AccountId><%= voucher.account_ids[1] %></AccountId>
+              <Date><%= voucher.date %></Date>
+              <DueDate><%= voucher.date %></DueDate>
+              <Amount><%= -voucher.amount %></Amount>
+              <CurrencyId><%= voucher.currency_id %></CurrencyId>
+              <TaxNo><%= voucher.tax_number %></TaxNo>
+              <Comment><%= voucher.comment %></Comment>
+              <BankAccountNo><%= voucher.bank_account_number %></BankAccountNo>
+            </Entry>
+          </Entries>
+        </Voucher>
+        <% end %>
+      </Vouchers>
+    </Bundle>
+  </Bundles>
+</bundlelist>

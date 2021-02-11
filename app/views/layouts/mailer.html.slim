@@ -1,0 +1,414 @@
+doctype html
+html
+  head
+    meta charset="UTF-8" /
+    link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" /
+    css:
+      @media (prefers-color-scheme: dark) {
+        h3 {
+          color: #67DBFF;
+        }
+
+        table {
+          border: 1px solid #ccc;
+          background-color: #fff;
+          width: 600px;
+        }
+
+        .text.email {
+          color: #67DBFF;
+        }
+
+        .ticket-container {
+          margin: 70px 0 36px 0;
+          text-align: center;
+        }
+
+        .ticket-container .ticket-amount {
+          color: #050539;
+        }
+
+        .play-button-container {
+          background-color: #67DBFF;
+        }
+
+        .play-button-container.profile {
+          background-color: #FAFAFA;
+        }
+
+        .play-button-container .text {
+          color: #FFFFFF;
+        }
+
+        .play-button-container .text-secondary {
+          color: #FFFFFF;
+        }
+
+        .play-button-container a.link {
+          background-color: #45E89F;
+          border: 10px solid #4EC6F0;
+          color: #FFFFFF;
+        }
+
+        a.link.password {
+          color: #050539;
+          background-color: #FFFFFF;
+          border: 10px solid #4EC6F0;
+        }
+
+        a.link.profile {
+          background-color: #67DBFF;
+          color: #FFFFFF;
+          border: 10px solid #ECECEC;
+        }
+
+        .footer {
+          background-color: #F5F5F5;
+        }
+
+        .footer .address {
+          color: #050539;
+        }
+      }
+
+      h3 {
+        font-family: Arial, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 41px;
+        max-width: 410px;
+        color: #67DBFF;
+        border-spacing: 0;
+      }
+
+      table {
+        width: 600px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #fff;
+      }
+
+      tr {
+        margin: auto;
+        max-width: 600px;
+      }
+
+      td {
+        padding: 0 40px;
+      }
+
+      .header-container {
+        padding: 0;
+      }
+
+      .header-container table {
+        border: none;
+      }
+
+      .header td img {
+        width: 150px;
+        height: auto;
+      }
+
+      .header-image {
+        padding: 0;
+        vertical-align: top;
+        text-align: right;
+      }
+
+      .text {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 24px 0 0 0;
+      }
+
+      .text.last {
+        margin-bottom: 32px;
+      }
+
+      .text.welcome {
+        font-size: 24px;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      .text.email {
+        color: #67DBFF;
+      }
+
+      .ticket-container .ticket-amount {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 64px;
+        color: #050539;
+        margin-right: 40px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .ticket-container .gold-ticket-container {
+        display: inline-block;
+        vertical-align: middle;
+        width: 138px;
+        height: 72px;
+      }
+
+      .play-button-container {
+        background-color: #67DBFF;
+        border-radius: 10px;
+        padding: 30px 30px 0 30px;
+        margin: 34px 0px;
+        text-align: center;
+      }
+
+      .play-button-container.profile {
+        background-color: #FAFAFA;
+        padding: 38px 40px;
+      }
+
+      .play-button-container .text {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        color: #FFFFFF;
+      }
+
+      .play-button-container .text-secondary {
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        padding: 0 0 30px 0;
+        margin: 0;
+        color: #FFFFFF;
+      }
+
+      .play-button-container a.link {
+        margin: 32px 0;
+        display: inline-block;
+        border-radius: 40px;
+        background-color: #45E89F;
+        border: 10px solid #4EC6F0;
+        padding: 20px;
+        text-decoration: none;
+        color: #FFFFFF;
+        width: 230px;
+      }
+
+      a.link.password {
+        color: #050539;
+        background-color: #FFFFFF;
+        border: 10px solid #4EC6F0;
+        width: 320px;
+        text-transform: uppercase;
+      }
+
+      a.link.profile {
+        background-color: #67DBFF;
+        color: #FFFFFF;
+        border: 10px solid #ECECEC;
+        width: 320px;
+        text-transform: uppercase;
+      }
+
+      .regards {
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      .sign {
+        font-weight: normal;
+        margin-bottom: 100px;
+      }
+
+      .footer-image-container img {
+        width: 255px;
+      }
+
+      .footer-container-top {
+        height: 100px;
+        width: 200px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .footer-container-top img {
+        max-width: 144px;
+        width: auto;
+        max-height: 35px;
+        height: auto;
+      }
+
+      .footer-container-middle {
+        text-align: center;
+      }
+
+      .footer-container-middle img {
+        max-width: 520px;
+      }
+
+      .footer-container-bottom {
+        height: 100px;
+        width: 255px;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      .footer-container-bottom img {
+        max-width: 200px;
+        height: auto;
+      }
+
+      .footer {
+        max-width: 600px;
+        background-color: #F5F5F5;
+      }
+
+      .footer .logo {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .footer .address {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: right;
+        color: #050539;
+        display: inline-block;
+      }
+
+      .footer .address-container {
+        text-align: right;
+      }
+
+      .address p {
+        margin: 0;
+        width: 140px;
+      }
+
+      .copyright {
+        font-family: Roboto, sans-serif;
+        font-size: 12px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      .prize-box .prize-container {
+        display: inline-block;
+        color: #FFFFFF;
+        font-family: Arial,sans-serif;
+        font-weight: bold;
+        font-size: 56px;
+        text-align: center;
+        line-height: 80px;
+      }
+
+      .prize-box {
+        background-color: #45E89F;
+        margin: 32px 0 18px 0;
+      }
+
+      .prize-box-wallet {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        text-align: left;
+        padding: 10px 0 10px 40px;
+      }
+
+      .prize-box-money {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .prize-box .content-container {
+        height: 80px;
+      }
+
+      .prize-container .currency {
+        font-size: 28px;
+        line-height: 62px;
+        vertical-align: top;
+      }
+
+      .prize-box .content-container {
+        height: 80px;
+      }
+
+      .wallet-container {
+        display: inline-block;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        background-color: #FFFFFF;
+        line-height: 70px;
+        text-align: center;
+      }
+
+      .wallet-container img {
+        max-height: 40px;
+        vertical-align: middle;
+      }
+
+      .wallet-cell {
+        padding: 0 0 0 40px;
+        width: 120px;
+      }
+
+      .prize-cell {
+        padding: 0 40px 0 0;
+      }
+  body
+    table
+      = yield
+      tr.footer
+        - if norway?
+          td.footer-container-top colspan="3"
+            = inline_image_tag 'lotteri_og_logo.png'
+          td.footer-container-top colspan="3"
+            = inline_image_tag 'right_to_play_logo.png'
+        - if sweden?
+          td.footer-container-top colspan="2"
+            = inline_image_tag 'spelinspektionen_logo.png'
+          td.footer-container-top colspan="2"
+            = inline_image_tag 'sbfo_logo.png'
+          td.footer-container-top colspan="2"
+            = inline_image_tag 'nets_logo.png'
+      - if sweden?
+        tr.footer
+          td.footer-container-top colspan="3"
+            = inline_image_tag 'stodlinjen_logo.png'
+          td.footer-container-top colspan="3"
+            = inline_image_tag 'skolinspektionen_logo.png'
+      tr.footer
+        td.footer-container-middle colspan="6"
+          = inline_image_tag 'footer_separator.png'
+      tr.footer
+        td.footer-container-bottom colspan="3"
+          - if norway?
+            = inline_image_tag 'application_logo_no.png'
+          - elsif sweden?
+            = inline_image_tag 'application_logo_se.png'
+        td.address-container colspan="3"
+          .address
+            p = COMPANY_ADDRESS
+      tr.copyright
+        td colspan="6"
+          span
+            | © #{Date.current.year} #{COMPANY_NAME}.
+            =< t('.copyright_notice')
