@@ -231,10 +231,6 @@ jobs:
       - run:
           name: Build image and deploy
           command: ./scripts/deploy-se.sh
-
-orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.1
-
 workflows:
   version: 2
   build-and-deploy:
