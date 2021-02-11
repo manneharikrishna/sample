@@ -239,7 +239,15 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - buildEN    
+      - buildEN
+      - build-se:
+          filters:
+            branches:
+              only:
+                - develop-se
+                - staging-se
+                - master-se
+    
       - deploy-no-enhance:
           requires:
             - buildEN
