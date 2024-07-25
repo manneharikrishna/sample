@@ -1,0 +1,4 @@
+operator_image: awx-operator-image
+operator_version: awx-operator-version
+pull_policy: Always
+ansible_debug_logs: "false"

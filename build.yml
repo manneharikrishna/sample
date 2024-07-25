@@ -1,0 +1,15 @@
+---
+- name: Build the AWX Operator
+  hosts: localhost
+
+  tasks:
+    - name: Build and (optionally) push operator image
+      community.docker.docker_image:
+        name: "{{ operator_image }}:{{ operator_version }}"
+        source: "build"
+        build:
+          dockerfile: "Dockerfile"
+          path: "../"
+        force_source: "yes"
+      vars:
+        ansible_python_interpreter: /bin/python3
